@@ -3,7 +3,7 @@
 include 'bd.php';
 
 $email = addslashes($_POST['email']);
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 
 
 $query = "SELECT * FROM usuarios WHERE email = '$email' and senha = '$senha'";
@@ -15,6 +15,7 @@ if(mysqli_num_rows($consulta) == 1){
 	while($dados = mysqli_fetch_array($consulta)){
 		$idusuario=$dados['idusuario'];
 		$nome=$dados['nome'];
+		$email=$dados['email'];
 		$cargo=$dados['cargo'];
 
 	}
@@ -23,6 +24,7 @@ if(mysqli_num_rows($consulta) == 1){
 	$_SESSION['login'] = true;
 	$_SESSION['idusuario'] = $idusuario;
 	$_SESSION['nome'] = $nome;
+	$_SESSION['email'] = $email;
 	$_SESSION['cargo'] = $cargo;
 
 

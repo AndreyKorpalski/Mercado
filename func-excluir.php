@@ -5,7 +5,7 @@
 
 if($dados){
     //mensagem 
-    header("Location:page-index.php");
+    header("Location:../mercado/page-index.php");
 }else{
     //mensagem
     Exit("Ocorreu um erro ao tentar inserir o produto");

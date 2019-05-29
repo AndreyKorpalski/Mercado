@@ -37,7 +37,7 @@ if(isset($_SESSION['login'])){
     <tr>
       <th class="text-center" scope="col">Nome</th>
       <th class="text-center" scope="col">Valor</th>
-      <th class="text-center" scope="col">Quantidade</th>
+      <!--<th class="text-center" scope="col">Quantidade</th>-->
       <th class="text-center" scope="col">Editar</th>
       <th class="text-center" scope="col">Excluir</th>
     </tr>
@@ -47,20 +47,27 @@ if(isset($_SESSION['login'])){
     <tr>
       <td class="text-center"><?php echo $dados['nome']?></td>
       <td class="text-center">R$<?php echo $dados['valor']?></td>
-      <td class="text-center"><?php echo $dados['estoque']?></td>
+      <!--<td class="text-center"><?php //echo $dados['estoque']?></td>-->
       <td class="text-center"><a class="btn btn-primary btn-sm " href="page-editar.php?idproduto=<?=$dados['idproduto']?>">Editar</td>
       <?php
-      if($_SESSION['cargo'] == 1){?>
-      <td class="text-center"><a class="btn btn-primary btn-sm disabled" href="func-excluir.php?idproduto=<?=$dados['idproduto']?>">Excluir</td>
-      <?php }?>
-      
+      if($_SESSION['cargo'] == "Administrador"){?>
+      <td class="text-center"><a class="btn btn-danger btn-sm" href="func-excluir.php?idproduto=<?=$dados['idproduto']?>">Excluir</td>
+      <?php }else if($_SESSION['cargo'] == "Operador"){?>
+        <td class="text-center"><a class="btn btn-secondary btn-sm disabled" href="func-excluir.php?idproduto=<?=$dados['idproduto']?>">Excluir</td>
+
     </tr>
   </tbody>
     <?php  
+      }
         }  
         mysqli_free_result($result);
-    ?>
-</table>
+        ?>
+        <!--
+        <div class="alert alert-warning" role="alert">
+          Produto<a class="alert-link">não encontrado</a>.
+        </div>
+      -->
+    </table>
       </div>
     </div>
   </div>

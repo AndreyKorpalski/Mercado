@@ -5,6 +5,6 @@ session_start();
 session_unset();
 session_destroy();
 
-header("location: ../projeto/page-login.php");
+header("location: ../mercado/page-login.php");
 exit;
 ?>

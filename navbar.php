@@ -9,12 +9,12 @@
           <li class="nav-item">
             <a class="nav-link" href="page-consultar.php">Consultar</a>
           </li>
-          <?php if($_SESSION['cargo'] == 2){ ?>
+          <?php if($_SESSION['cargo'] == "Operador"){ ?>
           <li class="nav-item">
             <a class="nav-link disabled" href="page-cadastrar.php">Cadastrar</a>
           </li>
           <?php
-          }else if($_SESSION['cargo'] == 1){?>
+          }else if($_SESSION['cargo'] == "Administrador"){?>
             <li class="nav-item">
               <a class="nav-link" href="page-cadastrar.php">Cadastrar</a>
             </li>
