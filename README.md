@@ -1,12 +1,12 @@
 # Mercado HTML / PHP
-- Bootstrap
-- HTML/CSS
-- PHP
-- JavaScript
+- Bootstrap;
+- HTML/CSS;
+- PHP;
+- JavaScript;
 
-Contem:
-- Sessão
-- Pesquisar
-- Cadastrar
-- Editar
-- Excluir
+#Contem:
+- Sessão;
+- Pesquisar - sem refresh na pagina;
+- Cadastrar;
+- Editar;
+- Excluir;
