@@ -18,7 +18,7 @@ include 'bd.php';
     <body>
         <div class="container ">
             <div class="row">            
-                <div class="login-container col-lg-8  col-xs-10" style="margin-top: 12%; margin-left: 8%;">
+                <div class="login-container col-xs-10 .col-md-5" style="margin-top: 12%; margin-left: 8%;">
                     <div class="login-content">
                         <div class="login-header text-center">
                             <h3><strong>Bem vindo</strong></h3>

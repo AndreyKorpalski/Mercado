@@ -37,8 +37,7 @@ echo "<table class='table'>";
                 if($_SESSION['cargo'] == "Administrador"){
                     echo "<td class='text-center'><a class='btn btn-danger btn-sm' href='func-excluir.php?idproduto=".$id."'>Excluir</td>";
                 }else if($_SESSION['cargo'] == "Operador"){
-                    echo "<td class='text-center'> <button type='button' class='btn btn-primary btn-sm' data-toggle='modal' data-target='#Modal' data-whatever=".$nome.">Excluir</button></td>";
-                    echo "<td> <div hidden>".$id."</div></td>";
+                    echo "<td class='text-center'></td>";
                     }
                 @mysqli_free_result($result);
             echo "</tr>";

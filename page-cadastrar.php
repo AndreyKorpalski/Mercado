@@ -14,19 +14,24 @@ if(isset($_SESSION['login'])){
     <div class="row">
       <div class="col-10">
         <form style="margin-top: 5%" method="POST" action="func-cadastrar.php">
-        <?php if(isset($_GET['sucesso'])){ ?>
+        <?php if(isset($_GET['msg1'])){ ?>
           <div class="alert alert-success" role="alert">
             Produto cadastrado com sucesso !
           </div>
           <?php } ?>
-          <?php if(isset($_GET['erro'])){ ?>
+          <?php if(isset($_GET['msg2'])){ ?>
           <div class="alert alert-danger" role="alert">
             Não foi possivel cadastrar o produto !
           </div>
           <?php } ?>
-          <?php if(isset($_GET['duplicado'])){ ?>
+          <?php if(isset($_GET['msg3'])){ ?>
             <div class="alert alert-warning" role="alert">
               Produto já existente !
+            </div>
+          <?php } ?>
+          <?php if(isset($_GET['msg4'])){ ?>
+            <div class="alert alert-warning" role="alert">
+              Erro ao tentar cadastrar este produto !
             </div>
           <?php } ?>
             <div class="form-group">
