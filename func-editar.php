@@ -7,7 +7,11 @@
 	$insert = "UPDATE produtos SET nome='$nome',valor='$valor',estoque='$estoque' where idproduto=$idproduto";
 	if ($link->query($insert) === TRUE) {
         //mensagem para o usuario 
-		header("Location:index.php");
+		echo  ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Produto atualizado com sucesso !')
+    				window.location.href='page-index.php';
+    			</SCRIPT>");
+
 	} else {
 		include ("header.php");
 		include ("navbar.php");

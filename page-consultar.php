@@ -29,6 +29,8 @@ if(isset($_SESSION['login'])){
     </div>
   </div>  
 <?php
+}else{
+  header('location:func-logout.php');
 }
 include 'footer.php';
 ?>

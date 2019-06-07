@@ -24,7 +24,9 @@ echo "<table class='table'>";
             echo "<th class='text-center' scope='col'>Quantidade</th";
             echo "</br>";
             echo "<th class='text-center' scope='col'>Editar</th>";
+            if($_SESSION['cargo'] == "Administrador"){
             echo "<th class='text-center' scope='col'>Excluir</th>";
+            }
         echo "</tr>";
     echo "</thead>";
     echo "<form>";
@@ -36,9 +38,7 @@ echo "<table class='table'>";
                 echo "<td class='text-center'><a class='btn btn-primary btn-sm' href='page-editar.php?idproduto=".$id."'>Editar</td>";
                 if($_SESSION['cargo'] == "Administrador"){
                     echo "<td class='text-center'><a class='btn btn-danger btn-sm' href='func-excluir.php?idproduto=".$id."'>Excluir</td>";
-                }else if($_SESSION['cargo'] == "Operador"){
-                    echo "<td class='text-center'></td>";
-                    }
+                }
                 @mysqli_free_result($result);
             echo "</tr>";
         echo "</tbody>";

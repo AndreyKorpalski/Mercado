@@ -5,10 +5,17 @@
 
 if($dados){
     //mensagem 
-    header("Location:../mercado/page-index.php");
+    echo  ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Produto excluido com sucesso !')
+    				window.location.href='page-index.php';
+    			</SCRIPT>");
+
 }else{
-    //mensagem
-    Exit("Ocorreu um erro ao tentar inserir o produto");
+    echo  ("<SCRIPT LANGUAGE='JavaScript'>
+    				window.alert('Houve um erro ao tentar excluir o produto !')
+    				window.location.href='page-index.php';
+    			</SCRIPT>");
+
 }
 
 ?>

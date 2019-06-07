@@ -6,15 +6,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+          <?php
+            if($_SESSION['cargo'] == "Administrador"){?>
+              <li class="nav-item">
+                <a class="nav-link" href="page-funcionario.php">Funcionário(s)</a>
+              </li>
+          <?php }?>
           <li class="nav-item">
             <a class="nav-link" href="page-consultar.php">Consultar</a>
           </li>
-          <?php if($_SESSION['cargo'] == "Operador"){ ?>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="page-cadastrar.php">Cadastrar</a>
-          </li>
           <?php
-          }else if($_SESSION['cargo'] == "Administrador"){?>
+          if($_SESSION['cargo'] == "Administrador"){?>
             <li class="nav-item">
               <a class="nav-link" href="page-cadastrar.php">Cadastrar</a>
             </li>
